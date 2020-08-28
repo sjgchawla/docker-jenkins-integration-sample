@@ -42,8 +42,8 @@ pipeline{
     post{
         success{
             echo 'This runs when success'
-            emailext body: "BUILD URL: ${BUILD_URL} ${BUILD_NUMBER}",
-            subject: " $currentBuild.currentResult $JOB_NAME",
+            emailext body: "BUILD URL: ${BUILD_URL}",
+            subject: "$JOB_NAME",
             to: 'gaurav_chawla6@optum.com'
         }
     }
