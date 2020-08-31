@@ -1,0 +1,8 @@
+apiVersion: v1
+metadata:
+  askId: poc
+  caAgileId: poc
+  projectKey: org.example:docker-jenkins-integration-sample
+  projectFriendlyName: DOCKER-JENKINS-INTEGRATION
+  componentType: code
+  targetQG: GATE_EXEMPT

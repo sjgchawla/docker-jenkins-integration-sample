@@ -7,6 +7,7 @@ pipeline{
     }
 
     environment{
+        DEVOPS_METRICS_ENABLED = 'false'
         registry = "sjgchawla/jenkinsfile-test"
         registryCredential = "DOCKER_HUB"
         dockerImage = ""
@@ -25,7 +26,7 @@ pipeline{
         stage('BUILD MAVEN'){
             steps{
                 script {
-                    glMavenBuild mavenGoals: "clean install", uploadJacocoResults : false
+                    glMavenBuild mavenGoals: "clean install", skipTests : true, uploadJacocoResults : false
                     //'mvn clean install'
                 }
             }
