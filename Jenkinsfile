@@ -25,8 +25,8 @@ pipeline{
         stage('BUILD MAVEN'){
             steps{
                 script {
-                    //glMavenBuild mavenGoals: "clean install"
-                    'mvn clean install'
+                    glMavenBuild mavenGoals: "clean install", uploadJacocoResults : false
+                    //'mvn clean install'
                 }
             }
         }
