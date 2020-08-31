@@ -1,6 +1,5 @@
-#!usr/bin/env groovy
 libraries{
-    lib("jenkins.pipline.library")
+    lib("jenkins.pipeline.library@develop")
 }
 
 pipeline{
