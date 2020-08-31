@@ -25,7 +25,7 @@ pipeline{
         stage('BUILD MAVEN'){
             steps{
                 script {
-                    glMavenBuild mavenGoals: "clean install docker-jenkins-integration-sample"
+                    glMavenBuild mavenGoals: "clean install"
                 }
             }
         }
