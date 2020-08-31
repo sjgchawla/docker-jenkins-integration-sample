@@ -26,7 +26,7 @@ pipeline{
         stage('BUILD MAVEN'){
             steps{
                 script {
-                    glMavenBuild mavenGoals: "clean install", skipTests : true, uploadJacocoResults : false
+                    glMavenBuild additionalProps: ['ci.env': ''], mavenGoals: "clean install", skipTests : true, uploadJacocoResults : false
                     //'mvn clean install'
                 }
             }
