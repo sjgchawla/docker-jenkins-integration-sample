@@ -12,6 +12,10 @@ pipeline{
         dockerImage = ""
     }
 
+    tools{
+        maven 'Maven 3.6.3'
+    }
+
     parameters{
         choice(choices: 'a\nb\nc', description: 'Choose any one', name: 'ALPHA')
     }
