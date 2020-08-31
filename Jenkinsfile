@@ -1,6 +1,5 @@
-libraries{
-    lib("jenkins.pipeline.library@develop")
-}
+#!/usr/bin/env groovy
+@Library("jenkins.pipeline.library") _
 
 pipeline{
     agent{
